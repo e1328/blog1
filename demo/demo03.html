@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>wangEditor 一个页面多个编辑器</title>
+</head>
+<body>
+<div id="div1">
+    <p>初始化的内容</p>
+    <p>初始化的内容</p>
+</div>
+
+<script type="text/javascript" src="http://unpkg.com/wangeditor/release/wangEditor.min.js"></script>
+<script type="text/javascript">
+    var E = window.wangEditor
+    var editor = new E('#div1')
+    editor.create()
+</script>
+</body>
+</html>

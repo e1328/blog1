@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.head{
+    width: 100%;
+    height: 120px;
+}
+.head-top{
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(-30deg,rgba(255,213,60,.71) 10%,rgba(161,230,243,.78)) no-repeat;
+}
+.head-top>div{
+    width: 1120px;
+    height: 100%;
+    margin: 0 auto;
+    /*background: greenyellow;*/
+}
+.head-top>div>span{
+    /*background: red;*/
+    font-size: 14px;
+    float: right;
+    line-height: 30px;
+}
+.head-bottom{
+    width: 100%;
+    height: 90px;
+    background: #fff;
+}
+.head-bottom>.head-bottom-main{
+    width: 1120px;
+    height: 100%;
+    margin: 0 auto;
+}
+.head-bottom>.head-bottom-main>.head-bottom-left{
+    width: 300px;
+    height: 100%;
+    /*background: #a3ffb8;*/
+    float: left;
+    position: relative;
+}
+.head-bottom>.head-bottom-main>.head-bottom-left>div{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.head-bottom>.head-bottom-main>.head-bottom-left>div>img{
+    float: left;
+}
+.head-bottom>.head-bottom-main>.head-bottom-left>div>h1{
+    font-size: 24px;
+    float: left;
+}
+.head-bottom>.head-bottom-main>.head-bottom-left>div>p{
+    font-size: 14px;
+    float: left;
+}
+.head-bottom>.head-bottom-main>.head-bottom-right{
+    width: 600px;
+    height: 100%;
+    /*background: #feffc9;*/
+    float: right;
+}
+.head-bottom>.head-bottom-main>.head-bottom-right>ul{
+    list-style: none;
+    float: right;
+}
+.head-bottom>.head-bottom-main>.head-bottom-right>ul>li{
+    float: left;
+    margin-left: 20px;
+    line-height: 90px;
+    font-size: 14px;
+}
+.head-bottom>div{
+    width: 1120px;
+    height: 100%;
+    margin: 0 auto;
+    /*background: rosybrown;*/
+}
+.admin{
+    width: 100%;
+}
+.admin>.admin-main{
+    width: 1120px;
+    height: 549px;
+    margin: 0 auto;
+    /*background: #c1f5ff;*/
+    border: 1px solid rgba(102, 102, 102, 0.14);
+}
+.admin>.admin-main>.admin-main-left{
+    width: 14%;
+    height: 100%;
+    background: #f4f8f9;
+    float: left;
+    border-right: 1px solid rgba(102, 102, 102, 0.14);
+    box-sizing: border-box;
+}
+.admin>.admin-main>.admin-main-left>ul{
+    list-style: none;
+}
+.admin>.admin-main>.admin-main-left>ul>li{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    text-indent: 3em;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.1);
+    border-right: 1px solid rgba(102, 102, 102, 0.1);
+    box-sizing: border-box;
+}
+.admin>.admin-main>.admin-main-left>ul>li>a{
+    text-decoration: none;
+    color: #444;
+}
+.admin>.admin-main>.admin-main-right{
+    width: 86%;
+    height: 100%;
+    /*background: #afffca;*/
+    float: right;
+    /*padding: 20px;*/
+    box-sizing: border-box;
+    /*border: 1px solid #000;*/
+}
+.admin>.admin-main>.admin-main-right>.bar{
+    width: 100%;
+    height: 1px;
+    background: #89cbdb;
+}
+.admin>.admin-main>.admin-main-right>.table{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.admin>.admin-main>.admin-main-right>.table>table{
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+}
+.admin>.admin-main>.admin-main-right>.table>.page{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid rgba(102, 102, 102, 0.14);
+}
+.admin>.admin-main>.admin-main-right>.table>.page>.add{
+    position: absolute;
+    left: 5%;
+}
+.admin>.admin-main>.admin-main-right>.table>.page>ul{
+    height: 30px;
+    /*background: #afffca;*/
+    list-style: none;
+    position: absolute;
+    right: 5%;
+}
+.admin>.admin-main>.admin-main-right>.table>.page>ul>li{
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    /*background: #feffc9;*/
+    font-size: 13px;
+    text-align: center;
+}
+.tail{
+    width: 100%;
+    height: 60px;
+    /*background: #beffd1;*/
+}
+.tail>.tail-top{
+    width: 100%;
+    height: 200px;
+    background: #555;
+}
+.tail>.tail-bottom{
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+.tail>.tail-bottom>p{
+    line-height: 60px;
+}
+.tail>.tail-bottom>p>img{
+    vertical-align: middle;
+    margin-left: 6px;
+}
