@@ -332,8 +332,8 @@
     box-sizing: border-box;
 }
 .login>h4{
-    color: #666;
-    font-weight: 400;
+    color: #000;
+    font-weight: 300;
     font-size: 18px;
 }
 .login>form{
@@ -383,8 +383,8 @@
     box-sizing: border-box;
 }
 .register>h4{
-    color: #666;
-    font-weight: 400;
+    color: #000;
+    font-weight: 300;
     font-size: 18px;
 }
 .register>form{
@@ -395,7 +395,7 @@
 .register>form>table>tbody>tr>td>span{
     font-size: 15px;
     line-height: 30px;
-    color: #757575;
+    color: #555;
 }
 .register>form>table>tbody>tr>td>input{
     width: 100%;
@@ -438,8 +438,8 @@
     box-sizing: border-box;
 }
 .admin>h4{
-    color: #666;
-    font-weight: 400;
+    color: #000;
+    font-weight: 300;
     font-size: 18px;
 }
 .admin>form{
@@ -475,4 +475,7 @@
     right: 0;
     font-size: 13px;
     text-align: center;
+}
+.my{
+    display: none;
 }
