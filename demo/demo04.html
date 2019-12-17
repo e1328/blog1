@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<input type="radio" value="西瓜" name="fruit">西瓜
+<input type="radio" value="苹果" name="fruit">苹果
+<input type="radio" value="香蕉" name="fruit">香蕉
+<button>点我</button>
+<script>
+    let btn = document.querySelector("button");
+    btn.onclick = function() {
+        let input = document.querySelector("input:checked");
+        console.log(input.value);
+    }
+</script>
+</body>
+</html>

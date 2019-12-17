@@ -6,25 +6,12 @@
     <script src="../js/jquery-1.12.4.js"></script>
 </head>
 <body>
-<ul>
-    <li>22222</li>
-</ul>
+<button id="abc1"></button>
 <button>点我</button>
 <script>
-    $("button").click(function () {
-        $.ajax({
-            type: "get",
-            url: "aaa.json",
-            success: function (data) {
-                let ul = $("ul");
-                for(let i = 0; i < data.length; i++) {
-                    let li = $("<li></li>");
-                    li.text(data[i]);
-                    ul.append(li);
-                }
-            }
-        })
-    })
+let myId = $("button").prop("id");
+let div = document.getElementById(myId);
+console.log(div);
 </script>
 </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script src="../js/jquery-1.12.4.js"></script>
+</head>
+<body>
+<table class="easyui-datagrid dg" width="100%" height="100%"
+       rownumbers="true" fitColumns="false" singleSelect="true" border="1px" color="red">
+    <thead >
+    <tr>
+        <th width="20px">1</th>
+        <th class="id" width="150">用户编号</th>
+        <th class="phone" width="150">联系电话</th>
+        <th class="username" width="150">用户名</th>
+        <th class="email" width="150">邮箱</th>
+        <th class="status" width="150">账户状态</th>
+        <th class="operate" width="200">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>13432825705</td>
+        <td>cblstc</td>
+        <td>13432825705@163.com</td>
+        <td>已启用</td>
+        <td>
+            <a href="" onclick="" class="easyui-linkbutton" iconCls="icon-search" plain="true">租客信息</a>
+            <a href="" class="easyui-linkbutton" iconCls="icon-no" plain="true">删除用户</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script>
+    $(function () {
+        let table = $("table>tbody>tr>td");
+        console.log(table);
+    })
+</script>
+</body>
+</html>

@@ -118,14 +118,15 @@
     box-sizing: border-box;
     padding: 14px 20px 10px 0;
 }
-.content>.content-main>.content-left>.common>span{
+.content>.content-main>.content-left>.common>h4{
     font-size: 22px;
+}
+.content>.content-main>.content-left>.common>h4>a{
+    text-decoration: none;
     color: #21759b;
+    font-weight: 400;
 }
-.content>.content-main>.content-left>.common>p:nth-of-type(1){
-    font-size: 14px;
-}
-.content>.content-main>.content-left>.common>p:nth-of-type(2){
+.content>.content-main>.content-left>.common>p{
     font-size: 13px;
 }
 .content>.content-main>.content-right{
@@ -138,7 +139,7 @@
     width: 100%;
     /*height: 50px;*/
     /*background: #b8dcff;*/
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 0 0 0 60px;
     box-sizing: border-box;
 }
@@ -291,22 +292,17 @@
     height: 60px;
     /*background: #beffd1;*/
 }
-.tail>.tail-top{
-    width: 100%;
-    height: 200px;
-    background: #555;
-}
-.tail>.tail-bottom{
+.tail>.tail-main{
     width: 100%;
     height: 60px;
     background: #fff;
     text-align: center;
     font-size: 12px;
 }
-.tail>.tail-bottom>p{
+.tail>.tail-main>p{
     line-height: 60px;
 }
-.tail>.tail-bottom>p>img{
+.tail>.tail-main>p>img{
     vertical-align: middle;
     margin-left: 6px;
 }
@@ -347,6 +343,7 @@
     box-sizing: border-box;
     margin-top: 16px;
     border: 1px solid #ddd;
+    font-weight: 100;
 }
 .login>form>input[type=text]{
     padding: 8px 6px 8px 6px;
@@ -403,6 +400,7 @@
     box-sizing: border-box;
     margin-top: 16px;
     border: 1px solid #ddd;
+    font-weight: 100;
 }
 .register>form>table>tbody>tr>td>input[type=text]{
     padding: 8px 6px 8px 6px;
@@ -453,6 +451,7 @@
     box-sizing: border-box;
     margin-top: 16px;
     border: 1px solid #ddd;
+    font-weight: 100;
 }
 .admin>form>input[type=text]{
     padding: 8px 6px 8px 6px;

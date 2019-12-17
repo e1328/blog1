@@ -51,10 +51,13 @@
 .head-bottom>.head-bottom-main>.head-bottom-left>div>h1{
     font-size: 24px;
     float: left;
+    color: #333;
+    font-weight: 500;
 }
 .head-bottom>.head-bottom-main>.head-bottom-left>div>p{
     font-size: 14px;
     float: left;
+    color: #333;
 }
 .head-bottom>.head-bottom-main>.head-bottom-right{
     width: 600px;
@@ -141,12 +144,15 @@
     width: 100%;
     height: 30px;
     position: absolute;
-    bottom: 0;
-    border-top: 1px solid rgba(102, 102, 102, 0.14);
+    bottom: 6px;
+    /*border-top: 1px solid rgba(102, 102, 102, 0.14);*/
 }
 .admin>.admin-main>.admin-main-right>.table>.page>.add{
     position: absolute;
     left: 5%;
+}
+.admin>.admin-main>.admin-main-right>.table>.page>.add>input[type=text]{
+    text-indent: 1em;
 }
 .admin>.admin-main>.admin-main-right>.table>.page>ul{
     height: 30px;
@@ -162,28 +168,28 @@
     /*background: #feffc9;*/
     font-size: 13px;
     text-align: center;
+    color: #333;
+}
+.admin>.admin-main>.admin-main-right>.table>.page>ul>li>a{
+    text-decoration: none;
+    color: #333;
 }
 .tail{
     width: 100%;
     height: 60px;
     /*background: #beffd1;*/
 }
-.tail>.tail-top{
-    width: 100%;
-    height: 200px;
-    background: #555;
-}
-.tail>.tail-bottom{
+.tail>.tail-main{
     width: 100%;
     height: 60px;
     background: #fff;
     text-align: center;
     font-size: 12px;
 }
-.tail>.tail-bottom>p{
+.tail>.tail-main>p{
     line-height: 60px;
 }
-.tail>.tail-bottom>p>img{
+.tail>.tail-main>p>img{
     vertical-align: middle;
     margin-left: 6px;
 }

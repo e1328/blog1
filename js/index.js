@@ -4,10 +4,12 @@ $(function () {
     $.ajax({
         type: "get",
         url: "http://localhost:8080/label",
+        dataType: "json",
         success: function (res) {
+            console.log(res);
             let arr = res.data;
             let ul = $(".hot-label>ul");
-            for(let i = 0; i < arr.length; i++) {
+            for(let i = 0; i < 6; i++) {
                 let li = $("<li></li>");
                 let a = $("<a href='#'></a>");
                 a.text(arr[i].labelName);
@@ -61,14 +63,16 @@ $(function () {
             let contentLeft = $(".content-left");
             for(let i = 0; i < arr.length; i++) {
                 let div = $("<div class='common'></div>");
-                let span = $("<span></span>");
-                span.text(arr[i].title);
-                let br1 = $("<br/>");
-                let br2 = $("<br/>");
+                let h4 = $("<h4></h4>");
+                let a = $("<a href='#'></a>");
+                a.text(arr[i].title);
+                a.prop("id", arr[i].articleId);
+                a.prop("href", "detail.html?id=" + arr[i].articleId);
+                h4.append(a);
+                let br = $("<br/>");
                 let p = $(`<p>发布于 <a href=\"#\">${arr[i].createTime.substring(0, 10)}</a>。 属于 <a href=\"#\">${arr[i].catalog.catalogName}</a> 分类，被贴了 <a href=\"#\">${arr[i].labelList[0].labelName}</a> - <a href=\"#\">${arr[i].labelList[0].labelName}</a> - <a href=\"#\">${arr[i].labelList[0].labelName}</a> 标签</p>`);
-                div.append(span);
-                div.append(br1);
-                div.append(br2);
+                div.append(h4);
+                div.append(br);
                 div.append(p);
                 contentLeft.append(div);
             }

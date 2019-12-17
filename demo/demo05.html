@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<input type="checkbox" value="西瓜">西瓜
+<input type="checkbox" value="苹果">苹果
+<input type="checkbox" value="香蕉">香蕉
+<button>点我</button>
+<script>
+    let btn = document.querySelector("button");
+    btn.onclick = function() {
+        let inputs = document.querySelectorAll("input");
+        inputs.forEach(function (item) {
+            if(item.checked === true) {
+                console.log(item.value);
+            }
+        })
+    }
+</script>
+</body>
+</html>
