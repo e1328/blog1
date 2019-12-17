@@ -59,6 +59,7 @@ $(function () {
         type: "get",
         url: "http://localhost:8080/article",
         success: function (res) {
+            console.log(res);
             let arr = res.data;
             let contentLeft = $(".content-left");
             for(let i = 0; i < arr.length; i++) {
@@ -70,7 +71,18 @@ $(function () {
                 a.prop("href", "detail.html?id=" + arr[i].articleId);
                 h4.append(a);
                 let br = $("<br/>");
-                let p = $(`<p>发布于 <a href=\"#\">${arr[i].createTime.substring(0, 10)}</a>。 属于 <a href=\"#\">${arr[i].catalog.catalogName}</a> 分类，被贴了 <a href=\"#\">${arr[i].labelList[0].labelName}</a> - <a href=\"#\">${arr[i].labelList[0].labelName}</a> - <a href=\"#\">${arr[i].labelList[0].labelName}</a> 标签</p>`);
+                let p = $("<p></p>");
+                p.append(`发布于 <a href=\"#\">${arr[i].createTime.substring(0, 10)}</a>。`);
+                p.append(`属于 <a href=\"#\">${arr[i].catalog.catalogName}</a> 分类`);
+                p.append("，被贴了 ");
+                for(let j = 0; j < arr[i].labelList.length - 1; j++) {
+                    let a = $("<a href='#'></a>");
+                    a.text(arr[i].labelList[j].labelName);
+                    p.append(a);
+                    p.append(" - ");
+                }
+                p.append(`<a href="#">${arr[i].labelList[arr[i].labelList.length - 1].labelName}</a>`);
+                p.append(" 标签");
                 div.append(h4);
                 div.append(br);
                 div.append(p);

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+</head>
+<body>
+<form action="" method="get">
+    <input type="text">
+    <input type="password">
+    <button>点我</button>
+</form>
+<script>
+    $(function () {
+        $("button").click(function () {
+            let form = $("form").get(0);
+            form.action ="http://localhost:8080/label";
+            form.submit();
+        })
+    })
+</script>
+</body>
+</html>

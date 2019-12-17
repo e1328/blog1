@@ -121,16 +121,6 @@
     width: 80px;
     margin-left: 16px;
 }
-.edit>.edit-main>.label>span{
-    display: inline-block;
-    width: 14px;
-    height: 16px;
-    font-size: 12px;
-    background: #da7777;
-    text-align: center;
-    margin-left: 2px;
-    color: #fff
-}
 .edit>.edit-main>.label>button{
     margin-left: 16px;
     width: 16px;
@@ -139,6 +129,16 @@
     background: #349edf;
     color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.edit>.edit-main>.label>.del{
+    display: inline;
+    width: 14px;
+    height: 16px;
+    font-size: 12px;
+    background: #da7777;
+    text-align: center;
+    margin-left: 2px;
+    color: #fff
 }
 .edit>.edit-main>.catalog{
     width: 100%;

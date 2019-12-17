@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>修改博客</title>
-    <link rel="stylesheet" href="css/modify.css">
+    <link rel="stylesheet" href="css/edit.css">
     <script type="text/javascript" src="http://unpkg.com/wangeditor/release/wangEditor.min.js"></script>
     <script src="js/jquery-1.12.4.js"></script>
     <script src="js/modify.js"></script>
@@ -25,7 +25,7 @@
             <div class="head-bottom-right">
                 <ul>
                     <li><a href="index.html">首页</a></li>
-                    <li><a href="#">写博客</a></li>
+                    <li><a href="admin.html">后台管理</a></li>
                 </ul>
             </div>
         </div>
@@ -38,55 +38,30 @@
         <div id="div2" class="text"></div>
         <div class="label">
             <label>文章标签</label>
-            <select>
-                <option value="Git">Git</option>
-                <option value="管道">管道</option>
-                <option value="Laravel">Laravel</option>
-                <option value="博客系统">博客系统</option>
-                <option value="scp">scp</option>
-                <option value="博客">博客</option>
-            </select>
-            <select>
-                <option value="Git">Git</option>
-                <option value="管道">管道</option>
-                <option value="Laravel">Laravel</option>
-                <option value="博客系统">博客系统</option>
-                <option value="scp">scp</option>
-                <option value="博客">博客</option>
-            </select>
-            <select>
-                <option value="Git">Git</option>
-                <option value="管道">管道</option>
-                <option value="Laravel">Laravel</option>
-                <option value="博客系统">博客系统</option>
-                <option value="scp">scp</option>
-                <option value="博客">博客</option>
-            </select>
-            <input type="button" value="添加标签">
+            <button>+</button>
         </div>
         <div class="catalog">
             <label>分类专栏</label>
             <select>
-                <option value="服务器">服务器</option>
-                <option value="PHP语言">PHP语言</option>
-                <option value="数据库">数据库</option>
-                <option value="Linux">Linux</option>
-                <option value="JavaScript">JavaScript</option>
+                <!--                <option value="服务器">服务器</option>-->
+                <!--                <option value="PHP语言">PHP语言</option>-->
+                <!--                <option value="数据库">数据库</option>-->
+                <!--                <option value="Linux">Linux</option>-->
+                <!--                <option value="JavaScript">JavaScript</option>-->
             </select>
-            <input type="button" value="添加标签">
+            <input type="text" style="display: none">
+            <button>+</button>
+            <button style="display: none">保存</button>
         </div>
         <div class="put">
-<!--            <button id="btn1">获取html</button>-->
-<!--            <button id="btn2">获取text</button>-->
-            <button id="put">保存</button>
+            <!--            <button id="btn1">获取html</button>-->
+            <!--            <button id="btn2">获取text</button>-->
+            <button id="put">修改博客</button>
         </div>
     </div>
 </div>
 <div class="tail">
-<!--    <div class="tail-top">-->
-
-<!--    </div>-->
-    <div class="tail-bottom">
+    <div class="tail-main">
         <p>湘ICP备19002166号-1<img src="http://icon.cnzz.com/img/pic.gif" alt=""></p>
     </div>
 </div>

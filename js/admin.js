@@ -148,7 +148,7 @@ $(function () {
                     let td4 = $("<td></td>");
                     let label = "";
                     for(let j = 0; j < res.data.rows[i].labelList.length - 1; j++) {
-                        label = label + res.data.rows[i].labelList[j].labelName + "-";
+                        label = label + res.data.rows[i].labelList[j].labelName + " - ";
                     }
                     label = label + res.data.rows[i].labelList[res.data.rows[i].labelList.length - 1].labelName;
                     td4.text(label);
@@ -169,6 +169,26 @@ $(function () {
             }
         });
     };
+
+    //修改
+    $("body").delegate("#article_table>table>tbody>tr>td>button:nth-child(1)", "click", function () {
+        let articleId = $(this).parent().parent().children().eq(0).text();
+        console.log(articleId);
+        window.location.href = "modify.html?id=" + articleId;
+    });
+
+    //删除
+    $("body").delegate("#article_table>table>tbody>tr>td>button:nth-child(2)", "click", function () {
+        let articleId = $(this).parent().parent().children().eq(0).text();
+        $.ajax({
+            type: "put",
+            url: "http://localhost:8080/article/" + articleId,
+            success: function (res) {
+                console.log(res);
+            }
+        })
+    });
+
     let article_current_page = 1;
     $("#article_current_page").text(article_current_page);
     articlePageEvent(article_current_page);
