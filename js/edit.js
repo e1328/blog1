@@ -54,7 +54,7 @@ $(function () {
 
     let addLabelBtn = $(".edit>.edit-main>.label>button");
     addLabelBtn.click(function () {
-        let input = $("<input type=\"text\" style='width: 80px;text-indent: 1em'><button class='del'>-</button>");
+        let input = $("<input type=\"text\"><button class='del'>-</button>");
         addLabelBtn.before(input);
     });
 

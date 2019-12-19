@@ -1,0 +1,105 @@
+.head-top>div{
+    width: 100%;
+}
+.head-bottom>.head-bottom-main{
+    width: 100%;
+}
+.head-bottom>.head-bottom-main>.head-bottom-left{
+    width: 40%;
+}
+.head-bottom>.head-bottom-main>.head-bottom-left>div{
+
+}
+.head-bottom>.head-bottom-main>.head-bottom-left>div>h1{
+    font-size: 10px;
+    display: none;
+}
+.head-bottom>.head-bottom-main>.head-bottom-left>div>p{
+    font-size: 10px;
+    display: none;
+}
+.head-bottom>.head-bottom-main>.head-bottom-right{
+    width: 60%;
+}
+.content>.content-main{
+    width: 100%;
+}
+.content>.content-main>.content-left{
+    width: 100%;
+    /*background: #ccb1b4;*/
+}
+.content>.content-main>.content-left>.article{
+    padding: 0 20px 10px 20px;
+    /*background: #f8f9c6;*/
+    box-sizing: border-box;
+}
+.content>.content-main>.content-left>.article>h4{
+    font-size: 20px;
+}
+.content>.content-main>.content-left>.comment-main{
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.content>.content-main>.content-left>.comment-main>.comment-top{
+    padding: 0 20px 0 20px;
+    box-sizing: border-box;
+}
+.content>.content-main>.content-left>.comment-main>.comment-top>input{
+    width: 80%;
+}
+.content>.content-main>.content-left>.comment-main>.comment-top>button{
+    width: 16%;
+}
+.content>.content-main>.content-left>.comment-main>.comment-bottom{
+    padding: 0 20px 0 20px;
+    box-sizing: border-box;
+}
+.content>.content-main>.content-right{
+    width: 100%;
+    /*background: skyblue;*/
+}
+.content>.content-main>.content-right>.search{
+    padding: 0 20px 0 20px;
+}
+.content>.content-main>.content-right>.search>input[type=text]{
+    width: 80%;
+}
+.content>.content-main>.content-right>.search>input[type=button]{
+    width: 18%;
+}
+.content>.content-main>.content-right>.hot-article{
+    padding: 0 10px 0 10px;
+    text-align: center;
+}
+.content>.content-main>.content-right>.update{
+    padding: 0 10px 0 10px;
+    text-align: center;
+}
+.content>.content-main>.content-right>.file{
+    padding: 0 10px 0 10px;
+    text-align: center;
+}
+.content>.content-main>.content-right>.catalog{
+    padding: 0 10px 0 10px;
+    text-align: center;
+}
+.content>.content-main>.content-right>.hot-label{
+    padding: 0 10px 0 10px;
+    text-align: center;
+    position: relative;
+}
+.content>.content-main>.content-right>.hot-label>ul{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.content>.content-main>.content-right>.friend-link{
+    padding: 0 10px 0 10px;
+    text-align: center;
+    position: relative;
+}
+.content>.content-main>.content-right>.friend-link>ul{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -1,0 +1,49 @@
+.head-top>div{
+    width: 100%;
+}
+.head-bottom>.head-bottom-main{
+    width: 100%;
+}
+.head-bottom>.head-bottom-main>.head-bottom-left{
+    width: 40%;
+}
+.head-bottom>.head-bottom-main>.head-bottom-left>div>h1{
+    font-size: 10px;
+    display: none;
+}
+.head-bottom>.head-bottom-main>.head-bottom-left>div>p{
+    font-size: 10px;
+    display: none;
+}
+.head-bottom>.head-bottom-main>.head-bottom-right{
+    width: 60%;
+}
+.admin>.admin-main{
+    width: 100%;
+}
+.admin>.admin-main>.admin-main-left{
+    width: 15%;
+}
+.admin>.admin-main>.admin-main-left>ul>li{
+    text-indent: 0;
+}
+.admin>.admin-main>.admin-main-right{
+    width: 85%;
+}
+.admin>.admin-main>.admin-main-right>.table>.page{
+    height: 60px;
+    /*background: orange;*/
+}
+.admin>.admin-main>.admin-main-right>.table>.page>.add{
+    top: 10%;
+    left: 4%;
+    /*background: skyblue;*/
+}
+.admin>.admin-main>.admin-main-right>.table>.page>.add>input[type=text]{
+    width: 38%;
+    text-indent: 0;
+}
+.admin>.admin-main>.admin-main-right>.table>.page>ul{
+    bottom: 0;
+    left: 4%;
+}

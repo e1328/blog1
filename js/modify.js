@@ -144,7 +144,7 @@ $(function () {
             }
             let label = $(".edit>.edit-main>.label>label");
             for(let i = 0; i < res.data.labelList.length; i++) {
-                let input = $("<input type=\"text\" style='width: 80px;text-indent: 1em'>");
+                let input = $("<input type=\"text\" style='text-indent: 1em'>");
                 input.val(res.data.labelList[i].labelName);
                 let button = $("<button class='del'>-</button>");
                 label.after(input);

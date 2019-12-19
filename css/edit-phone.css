@@ -1,0 +1,34 @@
+.head-top>div{
+    width: 100%;
+}
+.head-bottom>.head-bottom-main{
+    width: 100%;
+}
+.head-bottom>.head-bottom-main>.head-bottom-left{
+    width: 40%;
+}
+.head-bottom>.head-bottom-main>.head-bottom-left>div>h1{
+    font-size: 10px;
+    display: none;
+}
+.head-bottom>.head-bottom-main>.head-bottom-left>div>p{
+    font-size: 10px;
+    display: none;
+}
+.head-bottom>.head-bottom-main>.head-bottom-right{
+    width: 60%;
+}
+.edit>.edit-main{
+    width: 100%;
+    padding: 0 20px 0 20px;
+    box-sizing: border-box;
+}
+.edit>.edit-main>input{
+    width: 100%;
+}
+.edit>.edit-main>.toolbar{
+    overflow: hidden;
+}
+.edit>.edit-main>.label>input{
+    width: 44px;
+}
