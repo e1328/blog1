@@ -69,12 +69,18 @@
 .head-bottom>.head-bottom-main>.head-bottom-right>ul{
     list-style: none;
     float: right;
+    /*background: skyblue;*/
 }
 .head-bottom>.head-bottom-main>.head-bottom-right>ul>li{
-    float: left;
-    margin-left: 20px;
+    float: right;
+    margin-left: 16px;
     line-height: 90px;
     font-size: 14px;
+    /*background: orange;*/
+}
+.head-bottom>.head-bottom-main>.head-bottom-right>ul>li>a{
+    text-decoration: none;
+    color: #696969;
 }
 .head-bottom>div{
     width: 1120px;
