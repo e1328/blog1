@@ -196,6 +196,7 @@ $(function () {
             url: "http://localhost:8080/article/" + articleId,
             success: function (res) {
                 console.log(res);
+                articlePageEvent(article_current_page);
             }
         })
     });
