@@ -1,5 +1,14 @@
 $(function () {
 
+    //是否有登录的cookie
+    console.log(document.cookie);
+    if(document.cookie.length > 0) {
+        let role = document.cookie.split(";")[0].split("=")[1];
+        let name = document.cookie.split(";")[1].split("=")[1];
+        $("#username").text(name);
+        $("#username").css("color", "red");
+    }
+
     //左侧导航栏切换
     let lis = document.querySelectorAll(".admin-main-left>ul>li");
     let divs = document.querySelectorAll(".admin-main-right>.table");
@@ -147,10 +156,12 @@ $(function () {
                     td3.text(res.data.rows[i].catalog.catalogName);
                     let td4 = $("<td></td>");
                     let label = "";
-                    for(let j = 0; j < res.data.rows[i].labelList.length - 1; j++) {
-                        label = label + res.data.rows[i].labelList[j].labelName + " - ";
+                    if(res.data.rows[i].labelList.length > 0) {
+                        for(let j = 0; j < res.data.rows[i].labelList.length - 1; j++) {
+                            label = label + res.data.rows[i].labelList[j].labelName + " - ";
+                        }
+                        label = label + res.data.rows[i].labelList[res.data.rows[i].labelList.length - 1].labelName;
                     }
-                    label = label + res.data.rows[i].labelList[res.data.rows[i].labelList.length - 1].labelName;
                     td4.text(label);
                     let td5 = $("<td></td>");
                     td5.text(res.data.rows[i].createTime.substring(0, 10));
@@ -181,7 +192,7 @@ $(function () {
     $("body").delegate("#article_table>table>tbody>tr>td>button:nth-child(2)", "click", function () {
         let articleId = $(this).parent().parent().children().eq(0).text();
         $.ajax({
-            type: "put",
+            type: "delete",
             url: "http://localhost:8080/article/" + articleId,
             success: function (res) {
                 console.log(res);
@@ -193,5 +204,15 @@ $(function () {
     $("#article_current_page").text(article_current_page);
     articlePageEvent(article_current_page);
 
+    //注销
+    let logoutBtn = $("#logout");
+    logoutBtn.click(function () {
+        let name = document.cookie.split(";")[1].split("=")[1];
+        let date = new Date();
+        date.setTime(date.getTime() - 24 * 3600 * 1000);
+        document.cookie = "role=user;path=/;expires=" + date;
+        document.cookie = "name=" + name + ";path=/;expires=" + date;
+        window.location.href = "index.html";
+    });
 
 });

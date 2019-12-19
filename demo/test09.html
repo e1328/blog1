@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p style="text-align: center">当前时间<span></span></p>
+<script>
+    let span = document.querySelector("span");
+    let f = function() {
+        let date = new Date();
+        let time = "";
+        time = time + date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + "-" +
+            date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+        span.innerText = time;
+    };
+    // console.log(date);
+    f();
+    setInterval(function () {
+        f();
+    }, 1000)
+</script>
+</body>
+</html>

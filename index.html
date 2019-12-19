@@ -23,10 +23,12 @@
             </div>
             <div class="head-bottom-right">
                 <ul>
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="#" id="login">登录</a></li>
-                    <li><a href="#" id="register">注册</a></li>
                     <li><a href="#" id="admin">后台管理</a></li>
+                    <li><a href="#" id="logout" style="display: none">注销</a></li>
+                    <li><a href="#" id="username" style="display: none;">用户名</a></li>
+                    <li><a href="#" id="register">注册</a></li>
+                    <li><a href="#" id="login">登录</a></li>
+                    <li><a href="index.html">首页</a></li>
                 </ul>
             </div>
         </div>
@@ -43,7 +45,7 @@
         </div>
         <div class="content-right">
             <div class="search">
-                <input type="text" placeholder="Java">
+                <input type="text" placeholder="搜索">
                 <input type="button" value="搜索">
             </div>
             <div class="hot-article my">
@@ -102,16 +104,16 @@
 <div class="mask"></div>
 <div class="login">
     <h4>用户登录</h4>
-    <form action="">
-        <input type="text" placeholder="请输入用户账号">
-        <input type="password" placeholder="请输入用户密码">
-        <input type="submit" value="登录">
+    <form action="" method="post">
+        <input type="text" placeholder="请输入用户名">
+        <input type="password" placeholder="请输入密码">
+        <input type="button" value="登录">
     </form>
     <span id="close1">关闭</span>
 </div>
 <div class="register">
     <h4>用户注册</h4>
-    <form action="">
+    <form method="post">
         <table>
             <tr>
                 <td width="30%"><span>用户名</span></td>
@@ -130,7 +132,7 @@
                 <td><input type="password"></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="submit" value="注册"></td>
+                <td colspan="2"><input type="button" value="注册"></td>
             </tr>
         </table>
     </form>
@@ -138,10 +140,10 @@
 </div>
 <div class="admin">
     <h4>管理员登录</h4>
-    <form action="admin.html">
+    <form action="">
         <input type="text" placeholder="请输入管理员账号">
         <input type="password" placeholder="请输入管理员密码">
-        <input type="submit" value="登录">
+        <input type="button" value="登录">
     </form>
     <span id="close3">关闭</span>
 </div>

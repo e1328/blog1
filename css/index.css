@@ -76,12 +76,14 @@
 .head-bottom>.head-bottom-main>.head-bottom-right>ul{
     list-style: none;
     float: right;
+    /*background: skyblue;*/
 }
 .head-bottom>.head-bottom-main>.head-bottom-right>ul>li{
-    float: left;
-    margin-left: 20px;
+    float: right;
+    margin-left: 16px;
     line-height: 90px;
     font-size: 14px;
+    /*background: orange;*/
 }
 .head-bottom>.head-bottom-main>.head-bottom-right>ul>li>a{
     text-decoration: none;
@@ -129,6 +131,9 @@
 .content>.content-main>.content-left>.common>p{
     font-size: 13px;
 }
+.content>.content-main>.content-left>.common>p a{
+    color: #666;
+}
 .content>.content-main>.content-right{
     width: 320px;
     height: 100%;
@@ -140,18 +145,18 @@
     /*height: 50px;*/
     /*background: #b8dcff;*/
     margin-top: 20px;
-    padding: 0 0 0 60px;
+    padding: 0 0 0 110px;
     box-sizing: border-box;
 }
 .content>.content-main>.content-right>.search>input[type=text]{
-    width: 200px;
-    height: 28px;
+    width: 160px;
+    height: 26px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     text-indent: 1em;
 }
 .content>.content-main>.content-right>.search>input[type=button]{
-    width: 50px;
-    height: 30px;
+    width: 40px;
+    height: 26px;
     background: #5fbeaa;
     font-size: 12px;
     color: #fff;
@@ -225,7 +230,7 @@
     /*height: 240px;*/
     /*background: #ffd1ff;*/
     margin-top: 50px;
-    padding: 0 0 0 60px;
+    padding: 0 0 0 110px;
     box-sizing: border-box;
 }
 .content>.content-main>.content-right>.catalog>h4{
@@ -246,7 +251,7 @@
     /*height: 180px;*/
     /*background: #b4ffab;*/
     margin-top: 50px;
-    padding: 0 0 0 60px;
+    padding: 0 0 0 110px;
     box-sizing: border-box;
 }
 .content>.content-main>.content-right>.hot-label>h4{
@@ -269,7 +274,7 @@
     /*height: 180px;*/
     /*background: #b4ffab;*/
     margin-top: 50px;
-    padding: 0 0 0 60px;
+    padding: 0 0 0 110px;
     box-sizing: border-box;
 }
 .content>.content-main>.content-right>.friend-link>h4{
@@ -347,11 +352,13 @@
 }
 .login>form>input[type=text]{
     padding: 8px 6px 8px 6px;
+    color: #333;
 }
 .login>form>input[type=password]{
     padding: 8px 6px 8px 6px;
+    color: #333;
 }
-.login>form>input[type=submit]{
+.login>form>input[type=button]{
     background: #2e82ff;
     color: #fff;
 }
@@ -404,11 +411,13 @@
 }
 .register>form>table>tbody>tr>td>input[type=text]{
     padding: 8px 6px 8px 6px;
+    color: #333;
 }
 .register>form>table>tbody>tr>td>input[type=password]{
     padding: 8px 6px 8px 6px;
+    color: #333;
 }
-.register>form>table>tbody>tr>td>input[type=submit]{
+.register>form>table>tbody>tr>td>input[type=button]{
     background: #2e82ff;
     color: #fff;
 }
@@ -455,11 +464,13 @@
 }
 .admin>form>input[type=text]{
     padding: 8px 6px 8px 6px;
+    color: #333;
 }
 .admin>form>input[type=password]{
     padding: 8px 6px 8px 6px;
+    color: #333;
 }
-.admin>form>input[type=submit]{
+.admin>form>input[type=button]{
     background: #2e82ff;
     color: #fff;
 }
