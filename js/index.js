@@ -89,7 +89,7 @@ $(function () {
                 h4.append(a);
                 let br = $("<br/>");
                 let p = $("<p></p>");
-                p.append(`发布于 <a href=\"#\">${arr[i].createTime.substring(0, 10)}</a>。`);
+                p.append(`发布于 <a href=\"#\">${arr[i].createTime}</a>。`);
                 p.append(`属于 <a href=\"#\">${arr[i].catalog.catalogName}</a> 分类`);
                 if(arr[i].labelList.length > 0) {
                     p.append("，被贴了 ");
@@ -160,6 +160,23 @@ $(function () {
         oAdminDiv.css("display", "none");
     });
 
+    //格式化date时间
+    function getNowFormatDate() {
+        var date = new Date();
+        var seperator1 = "-";
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        var currentdate = year + seperator1 + month + seperator1 + strDate;
+        return currentdate;
+    }
+
     //注册
     let registerBtn = $(".register>form>table>tbody>tr:nth-child(5)>td>input[type=button]");
     registerBtn.click(function () {
@@ -173,7 +190,7 @@ $(function () {
                 "username": username,
                 "telephone": telephone,
                 "password": password,
-                "createTime": new Date()
+                "createTime": getNowFormatDate()
             }),
             dataType: "json",
             contentType: "application/json;charset=UTF-8",

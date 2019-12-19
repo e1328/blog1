@@ -164,7 +164,7 @@ $(function () {
                     }
                     td4.text(label);
                     let td5 = $("<td></td>");
-                    td5.text(res.data.rows[i].createTime.substring(0, 10));
+                    td5.text(res.data.rows[i].createTime);
                     let td6 = $("<td></td>");
                     td6.text("Y");
                     let td7 = $("<td><button style=\"font-size: 13px;\">修改</button>&nbsp;&nbsp;<button style=\"font-size: 13px;\">删除</button></td>");

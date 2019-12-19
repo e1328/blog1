@@ -9,7 +9,7 @@
 .head-top{
     width: 100%;
     height: 30px;
-    background: linear-gradient(-30deg,rgba(255,213,60,.71) 10%,rgba(161,230,243,.78)) no-repeat;
+    background: #000;
 }
 .head-top>div{
     width: 1120px;
@@ -22,6 +22,7 @@
     font-size: 14px;
     float: right;
     line-height: 30px;
+    color: #fff;
 }
 .head-bottom{
     width: 100%;
