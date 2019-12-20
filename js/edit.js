@@ -1,5 +1,12 @@
 $(function () {
 
+    //验证管理员登录
+    let role = localStorage.getItem("role");
+    console.log(role);
+    if(role !== "admin") {
+        window.location.href = "index.html";
+    }
+
     //富文本编辑器
     var E = window.wangEditor;
     var editor = new E('#div1', '#div2'); // 两个参数也可以传入 elem 对象，class 选择器

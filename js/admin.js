@@ -1,12 +1,13 @@
 $(function () {
 
-    //是否有登录的cookie
-    console.log(document.cookie);
-    if(document.cookie.length > 0) {
-        let role = document.cookie.split(";")[0].split("=")[1];
-        let name = document.cookie.split(";")[1].split("=")[1];
-        $("#username").text(name);
+    let role = localStorage.getItem("role");
+    console.log(role);
+    if(role === "admin") {
+        let username = localStorage.getItem("username");
+        $("#username").text(username);
         $("#username").css("color", "red");
+    }else {
+        window.location.href = "index.html";
     }
 
     //左侧导航栏切换
@@ -208,11 +209,7 @@ $(function () {
     //注销
     let logoutBtn = $("#logout");
     logoutBtn.click(function () {
-        let name = document.cookie.split(";")[1].split("=")[1];
-        let date = new Date();
-        date.setTime(date.getTime() - 24 * 3600 * 1000);
-        document.cookie = "role=user;path=/;expires=" + date;
-        document.cookie = "name=" + name + ";path=/;expires=" + date;
+        localStorage.clear();
         window.location.href = "index.html";
     });
 

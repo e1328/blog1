@@ -1,19 +1,18 @@
 $(function () {
 
-    //是否有登录的cookie
-    console.log(document.cookie);
-    if(document.cookie.length > 0) {
-        let role = document.cookie.split(";")[0].split("=")[1];
-        let name = document.cookie.split(";")[1].split("=")[1];
+    let role = localStorage.getItem("role");
+    console.log(role);
+    if(role !== null) {
+        let username = localStorage.getItem("username");
         $("#login").css("display", "none");
         $("#register").css("display", "none");
         $("#username").css("display", "inline");
         $("#logout").css("display", "inline");
-        $("#username").text(name);
-        if(role === "user") {
-            $("#username").css("color", "orange");
-        }else if(role === "admin") {
+        $("#username").text(username);
+        if(role === "admin") {
             $("#username").css("color", "red");
+        }else if(role === "user") {
+            $("#username").css("color", "orange");
         }
     }
 
@@ -124,13 +123,12 @@ $(function () {
     let btn = $("#btn");
     btn.click(function () {
         let userId = 0;
-        if(document.cookie.length > 0) {
-            let role = document.cookie.split(";")[0].split("=")[1];
-            let name = document.cookie.split(";")[1].split("=")[1];
+        if(role === "user") {
+            let username = localStorage.getItem("username");
             $.ajax({
                 type: "get",
                 url: "http://localhost:8080/user/search",
-                data: "username=" + name,
+                data: "username=" + username,
                 success: function (res) {
                     console.log(res);
                     userId = res.data.userId;
@@ -225,13 +223,9 @@ $(function () {
     oAdminBtn.click(function () {
         console.log(document.cookie);
         //有admin信息直接跳转
-        if(document.cookie.length > 0) {
-            let role = document.cookie.split(";")[0].split("=")[1];
-            let name = document.cookie.split(";")[1].split("=")[1];
-            if(role === "admin") {
-                window.location.href = "admin.html";
-                return;
-            }
+        if(role === "admin") {
+            window.location.href = "admin.html";
+            return;
         }
 
         oMaskDiv.css("display", "block");
@@ -287,10 +281,8 @@ $(function () {
             success: function (res) {
                 console.log(res);
                 if(res.flag === true) {
-                    let date = new Date();
-                    date.setTime(date.getTime() + 3600 * 1000);
-                    document.cookie = "role=user;path=/;expires=" + date;
-                    document.cookie = "name=" + res.data.username +";path=/;expires=" + date;
+                    localStorage.setItem("role", "user");
+                    localStorage.setItem("username", res.data.username);
                     window.location.href = "index.html";
                 }else{
                     alert("用户名或密码错误！");
@@ -302,11 +294,7 @@ $(function () {
     //注销
     let logoutBtn = $("#logout");
     logoutBtn.click(function () {
-        let name = document.cookie.split(";")[1].split("=")[1];
-        let date = new Date();
-        date.setTime(date.getTime() - 24 * 3600 * 1000);
-        document.cookie = "role=user;path=/;expires=" + date;
-        document.cookie = "name=" + name + ";path=/;expires=" + date;
+        localStorage.clear();
         window.location.href = "index.html";
     });
 
@@ -327,10 +315,8 @@ $(function () {
             success: function (res) {
                 console.log(res);
                 if(res.flag === true) {
-                    let date = new Date();
-                    date.setTime(date.getTime() + 3600 * 1000);
-                    document.cookie = "role=admin;path=/;expires=" + date;
-                    document.cookie = "name=" + res.data.username +";path=/;expires=" + date;
+                    localStorage.setItem("role", "admin");
+                    localStorage.setItem("username", res.data.username);
                     window.location.href = "admin.html";
                 }else{
                     alert("账号或密码错误！");

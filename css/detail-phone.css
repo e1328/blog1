@@ -105,3 +105,12 @@
     left: 50%;
     transform: translateX(-50%);
 }
+.login{
+    width: 80%;
+}
+.register{
+    width: 80%;
+}
+.admin{
+    width: 80%;
+}
