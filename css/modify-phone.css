@@ -5,7 +5,7 @@
     width: 100%;
 }
 .head-bottom>.head-bottom-main>.head-bottom-left{
-    width: 40%;
+    width: 20%;
 }
 .head-bottom>.head-bottom-main>.head-bottom-left>div>h1{
     font-size: 10px;
@@ -16,7 +16,7 @@
     display: none;
 }
 .head-bottom>.head-bottom-main>.head-bottom-right{
-    width: 60%;
+    width: 80%;
 }
 .edit>.edit-main{
     width: 100%;
