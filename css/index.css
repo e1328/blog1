@@ -312,6 +312,10 @@
 .tail>.tail-main>p{
     line-height: 60px;
 }
+.tail>.tail-main>p>a{
+    text-decoration: none;
+    color: #000;
+}
 .tail>.tail-main>p>img{
     vertical-align: middle;
     margin-left: 6px;

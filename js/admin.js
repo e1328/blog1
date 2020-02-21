@@ -206,6 +206,175 @@ $(function () {
     $("#article_current_page").text(article_current_page);
     articlePageEvent(article_current_page);
 
+    //评论数据获取
+    let commentPageEvent = function(page) {
+        $.ajax({
+            type: "get",
+            url: "http://localhost:8080/comment/search/" + page + "/15",
+            success: function (res) {
+                console.log(res);
+                let table = $("#comment_table>table");
+                let tbody = $("#comment_table>table>tbody");
+                tbody.empty();
+                for(let i = 0; i < res.data.rows.length; i++) {
+                    let tr = $("<tr style=\"font-size: 13px;\" align=\"center\" bgcolor=\"white\"></tr>");
+                    let td1 = $("<td style=\"height: 30px;\"></td>");
+                    td1.text(res.data.rows[i].commentId);
+                    let td2 = $("<td></td>");
+                    td2.text(res.data.rows[i].articleId);
+                    let td3 = $("<td></td>");
+                    td3.text(res.data.rows[i].article.title);
+                    let td4 = $("<td></td>");
+                    td4.text(res.data.rows[i].user.username);
+                    let td5 = $("<td></td>");
+                    td5.text(res.data.rows[i].content);
+                    let td6 = $("<td></td>");
+                    td6.text(res.data.rows[i].createTime);
+                    let td7 = $("<td></td>");
+                    let btn = $("<button style=\"font-size: 13px;\">删除</button>");
+                    td7.append(btn);
+                    tr.append(td1);
+                    tr.append(td2);
+                    tr.append(td3);
+                    tr.append(td4);
+                    tr.append(td5);
+                    tr.append(td6);
+                    tr.append(td7);
+                    tbody.append(tr);
+                }
+            }
+        });
+    };
+    let comment_current_page = 1;
+    $("#comment_current_page").text(comment_current_page);
+    commentPageEvent(comment_current_page);
+
+    //分类目录数据获取
+    let catalogPageEvent = function(page) {
+        $.ajax({
+            type: "get",
+            url: "http://localhost:8080/catalog/search/" + page + "/15",
+            success: function (res) {
+                console.log(res);
+                let table = $("#catalog_table>table");
+                let tbody = $("#catalog_table>table>tbody");
+                tbody.empty();
+                for(let i = 0; i < res.data.rows.length; i++) {
+                    let tr = $("<tr style=\"font-size: 13px;\" align=\"center\" bgcolor=\"white\"></tr>");
+                    let td1 = $("<td></td>");
+                    td1.text(res.data.rows[i].catalogId);
+                    let td2 = $("<td></td>");
+                    let input = $("<input type=\"text\" style=\"width: 100%;height: 30px;border: 1px solid #fff;box-sizing: border-box;text-align: center\">");
+                    input.val(res.data.rows[i].catalogName);
+                    td2.append(input);
+                    let td3 = $("<td></td>");
+                    td3.text("Y");
+                    let td4 = $("<td></td>");
+                    let btn1 = $("<button style=\"font-size: 13px;\">更新</button>");
+                    td4.append(btn1);
+                    let td5 = $("<td></td>");
+                    let btn2 = $("<button style=\"font-size: 13px;\">删除</button>");
+                    td5.append(btn2);
+                    td5.text(res.data.rows[i].content);
+                    tr.append(td1);
+                    tr.append(td2);
+                    tr.append(td3);
+                    tr.append(td4);
+                    tr.append(td5);
+                    tbody.append(tr);
+                }
+            }
+        });
+    };
+    let catalog_current_page = 1;
+    $("#catalog_current_page").text(catalog_current_page);
+    catalogPageEvent(catalog_current_page);
+
+    //用户数据获取
+    let userPageEvent = function(page) {
+        $.ajax({
+            type: "get",
+            url: "http://localhost:8080/user/search/" + page + "/15",
+            success: function (res) {
+                console.log(res);
+                let table = $("#user_table>table");
+                let tbody = $("#user_table>table>tbody");
+                tbody.empty();
+                for(let i = 0; i < res.data.rows.length; i++) {
+                    let tr = $("<tr style=\"font-size: 13px;\" align=\"center\" bgcolor=\"white\"></tr>");
+                    let td1 = $("<td style=\"height: 30px;\"></td>");
+                    td1.text(res.data.rows[i].userId);
+                    let td2 = $("<td></td>");
+                    td2.text(res.data.rows[i].username);
+                    let td3 = $("<td></td>");
+                    td3.text(res.data.rows[i].password);
+                    let td4 = $("<td></td>");
+                    td4.text(res.data.rows[i].telephone);
+                    let td5 = $("<td></td>");
+                    td5.text(res.data.rows[i].createTime);
+                    let td6 = $("<td></td>");
+                    let button = $("<button style=\"font-size: 13px;\">删除</button>");
+                    td6.append(button);
+                    tr.append(td1);
+                    tr.append(td2);
+                    tr.append(td3);
+                    tr.append(td4);
+                    tr.append(td5);
+                    tr.append(td6);
+                    tbody.append(tr);
+                }
+            }
+        });
+    };
+    let user_current_page = 1;
+    $("#user_current_page").text(user_current_page);
+    userPageEvent(user_current_page);
+
+    //友情链接数据获取
+    let linkPageEvent = function(page) {
+        $.ajax({
+            type: "get",
+            url: "http://localhost:8080/link/search/" + page + "/15",
+            success: function (res) {
+                console.log(res);
+                let table = $("#link_table>table");
+                let tbody = $("#link_table>table>tbody");
+                tbody.empty();
+                for(let i = 0; i < res.data.rows.length; i++) {
+                    let tr = $("<tr style=\"font-size: 13px;\" align=\"center\" bgcolor=\"white\"></tr>");
+                    let td1 = $("<td style=\"height: 30px;\"></td>");
+                    td1.text(res.data.rows[i].linkId);
+                    let td2 = $("<td></td>");
+                    let input1 = $("<input type=\"text\" style=\"width: 100%;height: 30px;border: 1px solid #fff;box-sizing: border-box;text-align: center\">");
+                    input1.val(res.data.rows[i].linkName);
+                    td2.append(input1);
+                    let td3 = $("<td></td>");
+                    let input2 = $("<input type=\"text\" style=\"width: 100%;height: 30px;border: 1px solid #fff;box-sizing: border-box;text-align: center\">");
+                    input2.val(res.data.rows[i].linkUrl);
+                    td3.append(input2);
+                    let td4 = $("<td></td>");
+                    td4.text("Y");
+                    let td5 = $("<td></td>");
+                    let button1 = $("<button style=\"font-size: 13px;\">更新</button>");
+                    td5.append(button1);
+                    let td6 = $("<td></td>");
+                    let button2 = $("<button style=\"font-size: 13px;\">删除</button>");
+                    td6.append(button2);
+                    tr.append(td1);
+                    tr.append(td2);
+                    tr.append(td3);
+                    tr.append(td4);
+                    tr.append(td5);
+                    tr.append(td6);
+                    tbody.append(tr);
+                }
+            }
+        });
+    };
+    let link_current_page = 1;
+    $("#link_current_page").text(link_current_page);
+    linkPageEvent(link_current_page);
+
     //注销
     let logoutBtn = $("#logout");
     logoutBtn.click(function () {

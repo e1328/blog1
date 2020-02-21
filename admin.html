@@ -12,7 +12,7 @@
 <body>
 <div class="head">
     <div class="head-top">
-        <div><span>您好，欢迎到周文龙个人博客!</span></div>
+        <div><span>您好，欢迎来到周文龙个人博客!</span></div>
     </div>
     <div class="head-bottom">
         <div class="head-bottom-main">
@@ -86,33 +86,26 @@
                     </ul>
                 </div>
             </div>
-            <div class="table" style="display: none">
+            <div id="catalog_table" class="table" style="display: none">
                 <table cellspacing="1px" align="center" bgcolor="#cbcdcc" width="100%">
-                    <tr style="font-size: 13px;" align="center" bgcolor="eff1f0">
-                        <th style="width: 10%;font-weight: 400;height: 30px">分类目录ID</th>
-                        <th style="width: 40%;font-weight: 400;height: 30px">分类目录名</th>
-                        <th style="width: 50%;font-weight: 400;height: 30px">操作</th>
-                    </tr>
-                    <tr style="font-size: 13px;" align="center" bgcolor="white">
-                        <td style="height: 30px;">1</td>
-                        <td><input type="text" value="服务器" style="width: 100%;height: 30px;border: 1px solid #fff;box-sizing: border-box;text-align: center"></td>
-                        <td><button style="font-size: 13px;">更新</button></td>
-                    </tr>
-                    <tr style="font-size: 13px;" align="center" bgcolor="white">
-                        <td style="height: 30px;">2</td>
-                        <td><input type="text" value="服务器" style="width: 100%;height: 30px;border: 1px solid #fff;box-sizing: border-box;text-align: center"></td>
-                        <td><button style="font-size: 13px;">更新</button></td>
-                    </tr>
-                    <tr style="font-size: 13px;" align="center" bgcolor="white">
-                        <td style="height: 30px;">3</td>
-                        <td><input type="text" value="服务器" style="width: 100%;height: 30px;border: 1px solid #fff;box-sizing: border-box;text-align: center"></td>
-                        <td><button style="font-size: 13px;">更新</button></td>
-                    </tr>
-                    <tr style="font-size: 13px;" align="center" bgcolor="white">
-                        <td style="height: 30px;">4</td>
-                        <td><input type="text" value="服务器" style="width: 100%;height: 30px;border: 1px solid #fff;box-sizing: border-box;text-align: center"></td>
-                        <td><button style="font-size: 13px;">更新</button></td>
-                    </tr>
+                    <thead>
+                        <tr style="font-size: 13px;" align="center" bgcolor="eff1f0">
+                            <th style="width: 10%;font-weight: 400;height: 30px">分类目录ID</th>
+                            <th style="width: 30%;font-weight: 400;height: 30px">分类目录名</th>
+                            <th style="width: 20%;font-weight: 400;height: 30px">是否置顶</th>
+                            <th style="width: 20%;font-weight: 400;height: 30px">操作</th>
+                            <th style="width: 20%;font-weight: 400;height: 30px">警告</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="font-size: 13px;" align="center" bgcolor="white">
+                            <td style="height: 30px;">1</td>
+                            <td><input type="text" value="服务器" style="width: 100%;height: 30px;border: 1px solid #fff;box-sizing: border-box;text-align: center"></td>
+                            <td>Y</td>
+                            <td><button style="font-size: 13px;">更新</button></td>
+                            <td><button style="font-size: 13px;">删除</button></td>
+                        </tr>
+                    </tbody>
                 </table>
                 <div class="page">
                     <div class="add">
@@ -120,38 +113,40 @@
                         <input type="button" value="添加">
                     </div>
                     <ul>
-                        <li>当前第 <span></span> 页</li>
+                        <li>当前第 <span id="catalog_current_page"></span> 页</li>
                         <li>&nbsp;&nbsp;</li>
                         <li><a href="#">上一页</a></li>
                         <li>&nbsp;&nbsp;</li>
                         <li><a href="#">下一页</a></li>
                         <li>&nbsp;&nbsp;</li>
-                        <li>第&nbsp;<input type="text" style="width: 24px;border: 1px solid rgba(102,102,102,0.36);text-align: center">&nbsp;页</li>
+                        <li>第&nbsp;<input id="catalog_turn_page" type="text" style="width: 24px;border: 1px solid rgba(102,102,102,0.36);text-align: center">&nbsp;页</li>
                         <li>&nbsp;&nbsp;</li>
                         <li><a href="#">跳转</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="table" style="display: none">
+            <div id="link_table" class="table" style="display: none">
                 <table cellspacing="1px" align="center" bgcolor="#cbcdcc" width="100%">
-                    <tr style="font-size: 13px;" align="center" bgcolor="eff1f0">
-                        <th style="width: 10%;font-weight: 400;height: 30px">友情链接ID</th>
-                        <th style="width: 35%;font-weight: 400;height: 30px">友情链接名</th>
-                        <th style="width: 35%;font-weight: 400;height: 30px">友情链接地址</th>
-                        <th style="width: 20%;font-weight: 400;height: 24px">操作</th>
-                    </tr>
-                    <tr style="font-size: 13px;" align="center" bgcolor="white">
-                        <td style="height: 30px;">1</td>
-                        <td><input type="text" value="csdn博客" style="width: 100%;height: 30px;border: 1px solid #fff;box-sizing: border-box;text-align: center"></td>
-                        <td><input type="text" value="http://www.baidu.com" style="width: 100%;height: 30px;border: 1px solid #fff;box-sizing: border-box;text-align: center"></td>
-                        <td><button style="font-size: 13px;">更新</button>&nbsp;<button style="font-size: 13px;">删除</button></td>
-                    </tr>
-                    <tr style="font-size: 13px;" align="center" bgcolor="white">
-                        <td style="height: 30px;">2</td>
-                        <td><input type="text" value="blog博客" style="width: 100%;height: 30px;border: 1px solid #fff;box-sizing: border-box;text-align: center"></td>
-                        <td><input type="text" value="http://www.163.com" style="width: 100%;height: 30px;border: 1px solid #fff;box-sizing: border-box;text-align: center"></td>
-                        <td><button style="font-size: 13px;">更新</button>&nbsp;<button style="font-size: 13px;">删除</button></td>
-                    </tr>
+                    <thead>
+                        <tr style="font-size: 13px;" align="center" bgcolor="eff1f0">
+                            <th style="width: 10%;font-weight: 400;height: 30px">友情链接ID</th>
+                            <th style="width: 20%;font-weight: 400;height: 30px">友情链接名</th>
+                            <th style="width: 20%;font-weight: 400;height: 30px">友情链接地址</th>
+                            <th style="width: 10%;font-weight: 400;height: 30px">是否置顶</th>
+                            <th style="width: 20%;font-weight: 400;height: 24px">操作</th>
+                            <th style="width: 20%;font-weight: 400;height: 24px">警告</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+<!--                        <tr style="font-size: 13px;" align="center" bgcolor="white">-->
+<!--                            <td style="height: 30px;">1</td>-->
+<!--                            <td><input type="text" value="csdn博客" style="width: 100%;height: 30px;border: 1px solid #fff;box-sizing: border-box;text-align: center"></td>-->
+<!--                            <td><input type="text" value="http://www.baidu.com" style="width: 100%;height: 30px;border: 1px solid #fff;box-sizing: border-box;text-align: center"></td>-->
+<!--                            <td>Y</td>-->
+<!--                            <td><button style="font-size: 13px;">更新</button></td>-->
+<!--                            <td><button style="font-size: 13px;">删除</button></td>-->
+<!--                        </tr>-->
+                    </tbody>
                 </table>
                 <div class="page">
                     <div class="add">
@@ -160,83 +155,42 @@
                         <input type="button" value="添加">
                     </div>
                     <ul>
-                        <li>当前第 <span></span> 页</li>
+                        <li>当前第 <span id="link_current_page"></span> 页</li>
                         <li>&nbsp;&nbsp;</li>
                         <li><a href="#">上一页</a></li>
                         <li>&nbsp;&nbsp;</li>
                         <li><a href="#">下一页</a></li>
                         <li>&nbsp;&nbsp;</li>
-                        <li>第&nbsp;<input type="text" style="width: 24px;border: 1px solid rgba(102,102,102,0.36);text-align: center">&nbsp;页</li>
+                        <li>第&nbsp;<input id="link_turn_page" type="text" style="width: 24px;border: 1px solid rgba(102,102,102,0.36);text-align: center">&nbsp;页</li>
                         <li>&nbsp;&nbsp;</li>
                         <li><a href="#">跳转</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="table" style="display: none">
+            <div id="comment_table" class="table" style="display: none">
                 <table cellspacing="1px" align="center" bgcolor="#cbcdcc" width="100%">
-                    <tr style="font-size: 13px;" align="center" bgcolor="eff1f0">
-                        <th style="width: 10%;font-weight: 400;height: 30px">评论ID</th>
-                        <th style="width: 10%;font-weight: 400;height: 30px">文章ID</th>
-                        <th style="width: 20%;font-weight: 400;height: 30px">文章标题</th>
-                        <th style="width: 10%;font-weight: 400;height: 30px">评论人</th>
-                        <th style="width: 30%;font-weight: 400;height: 30px">评论内容</th>
-                        <th style="width: 10%;font-weight: 400;height: 30px">评论时间</th>
-                        <th style="width: 10%;font-weight: 400;height: 24px">操作</th>
-                    </tr>
-                    <tr style="font-size: 13px;" align="center" bgcolor="white">
-                        <td style="height: 30px;">1</td>
-                        <td style="height: 30px;">3</td>
-                        <td>linux scp命令</td>
-                        <td>王五</td>
-                        <td>这个命令好难啊</td>
-                        <td>2019-12-10</td>
-                        <td><button style="font-size: 13px;">删除</button></td>
-                    </tr>
-                    <tr style="font-size: 13px;" align="center" bgcolor="white">
-                        <td style="height: 30px;">2</td>
-                        <td style="height: 30px;">3</td>
-                        <td>linux scp命令</td>
-                        <td>王五</td>
-                        <td>这个命令好难啊</td>
-                        <td>2019-12-10</td>
-                        <td><button style="font-size: 13px;">删除</button></td>
-                    </tr>
-                    <tr style="font-size: 13px;" align="center" bgcolor="white">
-                        <td style="height: 30px;">3</td>
-                        <td style="height: 30px;">3</td>
-                        <td>linux scp命令</td>
-                        <td>王五</td>
-                        <td>这个命令好难啊</td>
-                        <td>2019-12-10</td>
-                        <td><button style="font-size: 13px;">删除</button></td>
-                    </tr>
-                    <tr style="font-size: 13px;" align="center" bgcolor="white">
-                        <td style="height: 30px;">4</td>
-                        <td style="height: 30px;">3</td>
-                        <td>linux scp命令</td>
-                        <td>王五</td>
-                        <td>这个命令好难啊</td>
-                        <td>2019-12-10</td>
-                        <td><button style="font-size: 13px;">删除</button></td>
-                    </tr>
-                    <tr style="font-size: 13px;" align="center" bgcolor="white">
-                        <td style="height: 30px;">5</td>
-                        <td style="height: 30px;">3</td>
-                        <td>linux scp命令</td>
-                        <td>王五</td>
-                        <td>这个命令好难啊</td>
-                        <td>2019-12-10</td>
-                        <td><button style="font-size: 13px;">删除</button></td>
-                    </tr>
-                    <tr style="font-size: 13px;" align="center" bgcolor="white">
-                        <td style="height: 30px;">6</td>
-                        <td style="height: 30px;">3</td>
-                        <td>linux scp命令</td>
-                        <td>王五</td>
-                        <td>这个命令好难啊</td>
-                        <td>2019-12-10</td>
-                        <td><button style="font-size: 13px;">删除</button></td>
-                    </tr>
+                    <thead>
+                        <tr style="font-size: 13px;" align="center" bgcolor="eff1f0">
+                            <th style="width: 10%;font-weight: 400;height: 30px">评论ID</th>
+                            <th style="width: 10%;font-weight: 400;height: 30px">文章ID</th>
+                            <th style="width: 20%;font-weight: 400;height: 30px">文章标题</th>
+                            <th style="width: 10%;font-weight: 400;height: 30px">评论人</th>
+                            <th style="width: 30%;font-weight: 400;height: 30px">评论内容</th>
+                            <th style="width: 10%;font-weight: 400;height: 30px">评论时间</th>
+                            <th style="width: 10%;font-weight: 400;height: 24px">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+<!--                        <tr style="font-size: 13px;" align="center" bgcolor="white">-->
+<!--                            <td style="height: 30px;">1</td>-->
+<!--                            <td style="height: 30px;">3</td>-->
+<!--                            <td>linux scp命令</td>-->
+<!--                            <td>王五</td>-->
+<!--                            <td>这个命令好难啊</td>-->
+<!--                            <td>2019-12-10</td>-->
+<!--                            <td><button style="font-size: 13px;">删除</button></td>-->
+<!--                        </tr>-->
+                    </tbody>
                 </table>
                 <div class="page">
                     <div class="add">
@@ -244,13 +198,13 @@
                         <input type="button" value="查询">
                     </div>
                     <ul>
-                        <li>当前第 <span></span> 页</li>
+                        <li>当前第 <span id="comment_current_page"></span> 页</li>
                         <li>&nbsp;&nbsp;</li>
                         <li><a href="#">上一页</a></li>
                         <li>&nbsp;&nbsp;</li>
                         <li><a href="#">下一页</a></li>
                         <li>&nbsp;&nbsp;</li>
-                        <li>第&nbsp;<input type="text" style="width: 24px;border: 1px solid rgba(102,102,102,0.36);text-align: center">&nbsp;页</li>
+                        <li>第&nbsp;<input id="comment_turn_page" type="text" style="width: 24px;border: 1px solid rgba(102,102,102,0.36);text-align: center">&nbsp;页</li>
                         <li>&nbsp;&nbsp;</li>
                         <li><a href="#">跳转</a></li>
                     </ul>
@@ -299,26 +253,28 @@
                     </ul>
                 </div>
             </div>
-            <div class="table" style="display: none">
+            <div id="user_table" class="table" style="display: none">
                 <table cellspacing="1px" align="center" bgcolor="#cbcdcc" width="100%">
-                    <tr style="font-size: 13px;" align="center" bgcolor="eff1f0">
-                        <th style="width: 10%;font-weight: 400;height: 30px">用户ID</th>
-                        <th style="width: 25%;font-weight: 400;height: 24px">账号</th>
-                        <th style="width: 25%;font-weight: 400;height: 24px">密码</th>
-                        <th style="width: 40%;font-weight: 400;height: 24px">操作</th>
-                    </tr>
-                    <tr style="font-size: 13px;" align="center" bgcolor="white">
-                        <td style="height: 30px;">1</td>
-                        <td>zhangsan</td>
-                        <td>123456</td>
-                        <td><button style="font-size: 13px;">修改</button>&nbsp;&nbsp;<button style="font-size: 13px;">删除</button></td>
-                    </tr>
-                    <tr style="font-size: 13px;" align="center" bgcolor="white">
-                        <td style="height: 30px;">2</td>
-                        <td>lisi</td>
-                        <td>123456</td>
-                        <td><button style="font-size: 13px;">修改</button>&nbsp;&nbsp;<button style="font-size: 13px;">删除</button></td>
-                    </tr>
+                    <thead>
+                        <tr style="font-size: 13px;" align="center" bgcolor="eff1f0">
+                            <th style="width: 10%;font-weight: 400;height: 30px">用户ID</th>
+                            <th style="width: 20%;font-weight: 400;height: 24px">账号</th>
+                            <th style="width: 20%;font-weight: 400;height: 24px">密码</th>
+                            <th style="width: 20%;font-weight: 400;height: 24px">手机号</th>
+                            <th style="width: 20%;font-weight: 400;height: 24px">创建时间</th>
+                            <th style="width: 10%;font-weight: 400;height: 24px">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="font-size: 13px;" align="center" bgcolor="white">
+                            <td style="height: 30px;">1</td>
+                            <td>zhangsan</td>
+                            <td>123456</td>
+                            <td>17343698054</td>
+                            <td>2019-11-22</td>
+                            <td><button style="font-size: 13px;">删除</button></td>
+                        </tr>
+                    </tbody>
                 </table>
                 <div class="page">
                     <div class="add">
@@ -326,13 +282,13 @@
                         <input type="button" value="查询">
                     </div>
                     <ul>
-                        <li>当前第 <span></span> 页</li>
+                        <li>当前第 <span id="user_current_page"></span> 页</li>
                         <li>&nbsp;&nbsp;</li>
                         <li><a href="#">上一页</a></li>
                         <li>&nbsp;&nbsp;</li>
                         <li><a href="#">下一页</a></li>
                         <li>&nbsp;&nbsp;</li>
-                        <li>第&nbsp;<input type="text" style="width: 24px;border: 1px solid rgba(102,102,102,0.36);text-align: center">&nbsp;页</li>
+                        <li>第&nbsp;<input id="user_turn_page" type="text" style="width: 24px;border: 1px solid rgba(102,102,102,0.36);text-align: center">&nbsp;页</li>
                         <li>&nbsp;&nbsp;</li>
                         <li><a href="#">跳转</a></li>
                     </ul>
@@ -375,7 +331,7 @@
 </div>
 <div class="tail">
     <div class="tail-main">
-        <p>湘ICP备19002166号-1<img src="http://icon.cnzz.com/img/pic.gif" alt=""></p>
+        <p><a href="http://www.beian.miit.gov.cn/">湘ICP备20003196号</a><img src="http://icon.cnzz.com/img/pic.gif" alt=""></p>
     </div>
 </div>
 </body>
